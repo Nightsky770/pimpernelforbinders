@@ -3,7 +3,7 @@ The Scarlet Pimpernel for the DIY bookbinder. Available in US letter and A4 form
 
 Adventure! Intriuge! Narrow escapes! Feats of daring and courage! Hungarian-British author Emma Orczy's 1905 novel _The Scarlet Pimpernel_ was a sensation then and has been popular ever since. It influenced the rise of spy fiction in the twentieth century, and no less an expert in superheroes than Stan Lee called the Scarlet Pimpernel the first superhero.
 
-CW: Antisemitism, misogyny, classism. References to mob violence and violent death. Heroine bound and gagged.
+CW: Antisemitism, misogyny, classism. References to mob violence and violent death. Heroine bound and gagged. Blackmail.
 
 If you are using US letter paper (8.5" x 11"), download the following signatures and print them out, double-sided, flip on short side:
 * scarletletter.signature1.pdf
@@ -54,5 +54,6 @@ If you are using A4 paper, download the following signatures and print them out,
 TeX originals are in the source folder.
 
 Fonts used are:
-* EB Garamond
-* Pompadour: https://moorstation.org/typoasis/designers/lloyd/fonts/pompadour.zip
+* EB Garamond: https://www.1001freefonts.com/eb-garamond.font
+* Pompadour: https://www.1001freefonts.com/pompadour-initials.font
+* Goudy Thirty: https://www.1001freefonts.com/goudy-thirty.font
