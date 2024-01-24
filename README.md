@@ -5,47 +5,10 @@ Adventure! Intriuge! Narrow escapes! Feats of daring and courage! Hungarian-Brit
 
 CW: Antisemitism, misogyny, classism. References to mob violence and violent death. Heroine bound and gagged. Blackmail.
 
-If you are using US letter paper (8.5" x 11"), download the following signatures and print them out, double-sided, flip on short side:
-* scarletletter.signature1.pdf
-* scarletletter.signature2.pdf
-* scarletletter.signature3.pdf
-* scarletletter.signature4.pdf
-* scarletletter.signature5.pdf
-* scarletletter.signature6.pdf
-* scarletletter.signature7.pdf
-* scarletletter.signature8.pdf
-* scarletletter.signature9.pdf
-* scarletletter.signature10.pdf
-* scarletletter.signature11.pdf
-* scarletletter.signature12.pdf
-* scarletletter.signature13.pdf
-* scarletletter.signature14.pdf
-* scarletletter.signature15.pdf
-* scarletletter.signature16.pdf
-* scarletletter.signature17.pdf
-* scarletletter.signature18.pdf
-* scarletletter.signature19.pdf
+If you are using US letter paper (8.5" x 11"), download the "letter" folder containing the signatures and print them out, double-sided, flip on short side.
 
-If you are using A4 paper, download the following signatures and print them out, double-sided, flip on short side:
-* scarleta4.signature1.pdf
-* scarleta4.signature2.pdf
-* scarleta4.signature3.pdf
-* scarleta4.signature4.pdf
-* scarleta4.signature5.pdf
-* scarleta4.signature6.pdf
-* scarleta4.signature7.pdf
-* scarleta4.signature8.pdf
-* scarleta4.signature9.pdf
-* scarleta4.signature10.pdf
-* scarleta4.signature11.pdf
-* scarleta4.signature12.pdf
-* scarleta4.signature13.pdf
-* scarleta4.signature14.pdf
-* scarleta4.signature15.pdf
-* scarleta4.signature16.pdf
-* scarleta4.signature17.pdf
-* scarleta4.signature18.pdf
-* scarleta4.signature19.pdf
+If you are using A4, download the "a4" folder containing the signatures and print them out, double-sided, flip on short side.
+
 
 TeX originals are in the source folder.
 
