@@ -25,8 +25,6 @@ If you are using US letter paper (8.5" x 11"), download the following signatures
 * scarletletter.signature17.pdf
 * scarletletter.signature18.pdf
 * scarletletter.signature19.pdf
-* scarletletter.signature20.pdf
-* scarletletter.signature21.pdf
 
 If you are using A4 paper, download the following signatures and print them out, double-sided, flip on short side:
 * scarleta4.signature1.pdf
@@ -48,8 +46,6 @@ If you are using A4 paper, download the following signatures and print them out,
 * scarleta4.signature17.pdf
 * scarleta4.signature18.pdf
 * scarleta4.signature19.pdf
-* scarleta4.signature20.pdf
-* scarleta4.signature21.pdf
 
 TeX originals are in the source folder.
 
