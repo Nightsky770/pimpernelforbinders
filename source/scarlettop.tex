@@ -1,6 +1,6 @@
 \documentclass[
 %paper=5.5in:8.5in,
-paper=a5,
+a5paper,
 BCOR=7mm,
 twoside,
 DIV=calc,
@@ -20,7 +20,7 @@ headings=big]{scrbook}
 \usepackage{pifont}
 \usepackage{enumitem}
 \usepackage{caption}
-\usepackage{csquotes}
+\usepackage[maxlevel=3]{csquotes}
 \usepackage[export]{adjustbox}
 \usepackage{polyglossia}
 \usepackage{afterpage}
@@ -30,8 +30,11 @@ headings=big]{scrbook}
 \usepackage{ebgaramond}
 \usepackage{verse}
 
+\MakeAutoQuote{»}{«}
+
 \setmainfont{EB Garamond}
 \setdefaultlanguage[variant=uk]{english}
+\setotherlanguage{french}
 
 \newcommand\longdash{\mbox{---\,}\ignorespaces{}}
 
@@ -39,9 +42,22 @@ headings=big]{scrbook}
 \newcommand{\moderatelyhuge}{\fontsize{50}{60}\selectfont}
 \newcommand{\reasonablyhuge}{\fontsize{30}{40}\selectfont}
 
-\newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
-\newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
-
+\newcount\zzc
+\makeatletter
+\def\zz{%
+\ifnum\prevgraf<\c@L@lines
+\zzc\z@
+\loop
+\ifnum\zzc<\prevgraf
+\advance\zzc\@ne
+\afterassignment\zzda\count@\L@parshape\relax
+\repeat
+\parshape\L@parshape
+\fi}
+\def\zzda{\afterassignment\zzdb\dimen@}
+\def\zzdb{\afterassignment\zzdef\dimen@}
+\def\zzdef#1\relax{\edef\L@parshape{\the\numexpr\count@-1\relax\space #1}}
+\makeatother
 
 \DeclareTOCStyleEntry[linefill=\TOCLineLeaderFill]{chapter}{chapter}
 
@@ -132,7 +148,7 @@ headings=big]{scrbook}
 \centering
 %\begin{minipage}[c]{1.2\linewidth}
 \includegraphics[width=\linewidth]{guill2}
-\caption{Traitors, look and tremble: she will cease her activity only when you have all perished.}
+\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
 \label{guillotine}
 %\end{minipage}
 \end{figure}
@@ -201,7 +217,7 @@ Dropcaps are set in Paul Lloyd's font Pompadour.\\moorstation.org/typoasis/desig
 \vfill
 Cover illustration cropped from the German poster for the 1934 movie of \textit{The Scarlet Pimpernel}, which starred Leslie Howard and Merle Oberon and was directed by Harold Young.
 \vfill
-Illustration on page \pageref{guillotine} is an engraving by Jean-Baptiste Louvion (1740---1804), printed around 1793 and now held by the Musée Carnavalet in Paris. The caption reads \enquote{Traitres regardez et tremblez elle ne perdra son activité, que quand vous aurés tous perdu la vie.} (Spelling and punctuation in original.) English: \enquote{Traitors, look and tremble: she will cease her activity only when you have all perished.}
+Illustration on page \pageref{guillotine} is an engraving by Jean-Baptiste Louvion (1740---1804), printed around 1793 and now held by the Musée Carnavalet in Paris. The caption reads \enquote{Traitres regardez et tremblez elle ne perdra son activité, que quand vous aurés tous perdu la vie.} (Spelling and punctuation in original.) English: \enquote{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
 \vfill
 Illustration on page \pageref{flowers} is of a scarlet pimpernel, \textit{Anagallis arvensis}. It was painted by Anne Pratt (1806---1893), whose book \textit{Wild Flowers} was published in London, by the Society for Promoting Christian Knowledge, in 1857. 
 \vfill
