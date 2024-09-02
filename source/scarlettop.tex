@@ -29,6 +29,8 @@ headings=big]{scrbook}
 \usepackage{subfiles}
 \usepackage{ebgaramond}
 \usepackage{verse}
+\usepackage{ellipsis}
+\usepackage{pdfpages}
 
 \MakeAutoQuote{»}{«}
 
@@ -36,6 +38,9 @@ headings=big]{scrbook}
 \setdefaultlanguage[variant=uk]{english}
 \setotherlanguage{french}
 
+\catcode`\—=13
+\protected\def—{\textemdash\allowbreak}
+%\protected\def—{\textemdash}
 \newcommand\longdash{\mbox{---\,}\ignorespaces{}}
 
 \newcommand{\HUGE}{\fontsize{50}{60}\selectfont}
@@ -108,17 +113,19 @@ headings=big]{scrbook}
 
 
 \begin{document}
+\frontmatter
 \renewcommand*{\sectionmarkformat}{}
 %\renewcommand*{\chapterpagestyle}{empty}
 
 \KOMAoptions{headings=openright}
-\pagestyle{empty}
-\begin{figure}[p]
-\begin{minipage}[c]{\linewidth}
-\includegraphics[width=\linewidth]{scarletpimpfront}
-\end{minipage}
-\end{figure}
+%\pagestyle{empty}
+%\begin{figure}[p]
+%\begin{minipage}[c]{\linewidth}
+%\includegraphics[width=\linewidth]{scarletpimpfront}
+%\end{minipage}
+%\end{figure}
 
+\includepdf[width=1.1\textwidth]{scarletpimpfront.png}
 
 
 
@@ -133,34 +140,55 @@ headings=big]{scrbook}
 
 \KOMAoptions{headings=openany}
 
-\renewcommand*{\chapterpagestyle}{empty}
-
-
 \tableofcontents
-\thispagestyle{empty}
 \clearpage
 
 %\thispagestyle{empty}
-{\headsep=0pt
-\headheight=20pt
+%{\headsep=0pt
+%\headheight=20pt
+%\vfill
+%\begin{figure}[p!]
+%\centering
+%%\begin{minipage}[c]{1.2\linewidth}
+%\includegraphics[width=\linewidth]{guill2}
+%\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
+%\label{guillotine}
+%%\end{minipage}
+%\end{figure}
+%\vfill
+%\clearpage}
+
+\makeatletter
+\@ifclasswith{scrbook}{a5paper}
+{%
+%\vfill
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=.9\textwidth]{guillotine}
+	\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
+	\label{guillotine}
+\end{figure}
+%\vfill
+\thispagestyle{empty}
+\clearpage
+
+}{%
 \vfill
 \begin{figure}[p!]
-\centering
-%\begin{minipage}[c]{1.2\linewidth}
-\includegraphics[width=\linewidth]{guill2}
-\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
-\label{guillotine}
-%\end{minipage}
+	\centering
+	\includegraphics[width=\textwidth]{guillotine}
+	\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
+	\label{guillotine}
 \end{figure}
 \vfill
 \thispagestyle{empty}
-\clearpage}
+\clearpage
+}
+\makeatother
 
-%\renewcommand{\listfigurename}{List of Colour Illustrations}
-%\listoffigures
-%\clearpage
 
-\pagestyle{headings}
+
+\mainmatter
 \renewcommand*{\chapterpagestyle}{plain}
 %\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
 
@@ -209,18 +237,35 @@ headings=big]{scrbook}
 \chapter*{Colophon}
 
 \centering
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond's famous humanist typefaces from the mid-16\textsuperscript{th} century. \\github.com/georgd/EB-Garamond
-\vfill
-Chapter headings are set in Dieter Steffmann's font Goudy Thirty Light.\\www.steffmann.de
-\vfill
-Dropcaps are set in Paul Lloyd's font Pompadour.\\moorstation.org/typoasis/designers/lloyd/
-\vfill
-Cover illustration cropped from the German poster for the 1934 movie of \textit{The Scarlet Pimpernel}, which starred Leslie Howard and Merle Oberon and was directed by Harold Young.
-\vfill
-Illustration on page \pageref{guillotine} is an engraving by Jean-Baptiste Louvion (1740---1804), printed around 1793 and now held by the Musée Carnavalet in Paris. The caption reads \enquote{Traitres regardez et tremblez elle ne perdra son activité, que quand vous aurés tous perdu la vie.} (Spelling and punctuation in original.) English: \enquote{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
-\vfill
-Illustration on page \pageref{flowers} is of a scarlet pimpernel, \textit{Anagallis arvensis}. It was painted by Anne Pratt (1806---1893), whose book \textit{Wild Flowers} was published in London, by the Society for Promoting Christian Knowledge, in 1857. 
-\vfill
-Typeset in \LaTeX{}.
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond's famous humanist typefaces from the mid-sixteenth century. \\github.com/georgd/EB-Garamond
+
+\rule{0.5\textwidth}{.4pt}
+
+Hungarian-British author Baroness Emma »Emmuska« Orczy (1865\textendash1947) first published \textit{The Scarlet Pimpernel} in 1905, by Greening in London (UK).
+
+\rule{0.5\textwidth}{.4pt}
+
+Chapter headings are set in Dieter Steffmann's font Goudy Thirty Light. Dropcaps are set in Paul Lloyd's font Pompadour.\\www.steffmann.de\\moorstation.org/typoasis/designers/lloyd/
+
+\rule{0.5\textwidth}{.4pt}
+
+Title page illustration cropped from the German poster for the 1934 movie of \textit{The Scarlet Pimpernel}, directed by Harold Young.
+
+\rule{0.5\textwidth}{.4pt}
+
+Illustration on page \pageref{guillotine} is from an engraving by Jean-Baptiste Louvion (1740\textendash1804), printed around 1793 and now held by the Musée Carnavalet in Paris. 
+
+\rule{0.5\textwidth}{.4pt}
+
+Illustration on page \pageref{flowers} was painted by British artist Anne Pratt (1806\textendash1893) for her 1857 book \textit{Wild Flowers}. 
+
+\rule{0.5\textwidth}{.4pt}
+
+This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed: creativecommons.org/publicdomain/zero/1.0/
+
+\rule{0.5\textwidth}{.4pt}
+
+Typeset in \LaTeX{}. Last revised \today.
+\enlargethispage{\baselineskip}
 \thispagestyle{empty}
 \end{document}
