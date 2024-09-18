@@ -1,0 +1,7 @@
+Fonts used are:
+* EB Garamond: https://www.1001freefonts.com/eb-garamond.font
+* Pompadour: https://www.1001freefonts.com/pompadour-initials.font
+* Goudy Thirty: https://www.1001freefonts.com/goudy-thirty.font
+
+
+.sty files should go either in the directory where you're running TeX, or a directory TeX knows about.
