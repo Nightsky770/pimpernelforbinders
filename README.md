@@ -10,9 +10,4 @@ If you are using US letter paper (8.5" x 11"), download the "letter" folder cont
 If you are using A4, download the "a4" folder containing the signatures and print them out, double-sided, flip on short side.
 
 
-TeX originals are in the source folder.
-
-Fonts used are:
-* EB Garamond: https://www.1001freefonts.com/eb-garamond.font
-* Pompadour: https://www.1001freefonts.com/pompadour-initials.font
-* Goudy Thirty: https://www.1001freefonts.com/goudy-thirty.font
+TeX originals are in the source folder. You do not need them unless you will be modifying them.
