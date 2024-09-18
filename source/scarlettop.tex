@@ -1,129 +1,43 @@
 \documentclass[
-%paper=5.5in:8.5in,
-a5paper,
-BCOR=7mm,
-twoside,
-DIV=calc,
-12pt,
-usegeometry,
-chapterprefix,
-endperiod,
-headings=big]{scrbook} 
+paper=5.5in:8.5in,
+%a5paper,
+]{scrbook} 
 
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{fontspec}
-\usepackage[T1]{fontenc} % International character encodings
-\usepackage{makeidx}
-\usepackage{lettrine}
-\usepackage{scrlayer-scrpage}
-\usepackage{pifont}
-\usepackage{enumitem}
-\usepackage{caption}
-\usepackage[maxlevel=3]{csquotes}
-\usepackage[export]{adjustbox}
-\usepackage{polyglossia}
-\usepackage{afterpage}
-\usepackage{microtype}
-\usepackage[all]{nowidow}
-\usepackage{subfiles}
-\usepackage{ebgaramond}
-\usepackage{verse}
-\usepackage{ellipsis}
-\usepackage{pdfpages}
+\usepackage{bindery}
+\usepackage{illustrations}
+\usepackage{dropcaps}
+\usepackage{sparsetoc}
 
-\MakeAutoQuote{»}{«}
 
-\setmainfont{EB Garamond}
-\setdefaultlanguage[variant=uk]{english}
 \setotherlanguage{french}
 
-\catcode`\—=13
-\protected\def—{\textemdash\allowbreak}
-%\protected\def—{\textemdash}
-\newcommand\longdash{\mbox{---\,}\ignorespaces{}}
-
-\newcommand{\HUGE}{\fontsize{50}{60}\selectfont}
-\newcommand{\moderatelyhuge}{\fontsize{50}{60}\selectfont}
-\newcommand{\reasonablyhuge}{\fontsize{30}{40}\selectfont}
-
-\newcount\zzc
-\makeatletter
-\def\zz{%
-\ifnum\prevgraf<\c@L@lines
-\zzc\z@
-\loop
-\ifnum\zzc<\prevgraf
-\advance\zzc\@ne
-\afterassignment\zzda\count@\L@parshape\relax
-\repeat
-\parshape\L@parshape
-\fi}
-\def\zzda{\afterassignment\zzdb\dimen@}
-\def\zzdb{\afterassignment\zzdef\dimen@}
-\def\zzdef#1\relax{\edef\L@parshape{\the\numexpr\count@-1\relax\space #1}}
-\makeatother
-
-\DeclareTOCStyleEntry[linefill=\TOCLineLeaderFill]{chapter}{chapter}
 
 \newfontfamily\lettrinefont{POMPADOU.ttf}
-\newfontfamily\headerfont{EB Garamond}
-\newfontfamily\chapheadfont{goudy-thirty.light.ttf}
-\newfontfamily\chapterfont{goudy-thirty.light.ttf}
 \renewcommand{\LettrineFontHook}{\fontspec{POMPADOU.ttf}}
+\newfontfamily\headerfont{EB Garamond}
 
-\renewcommand*{\chaptermarkformat}{}
-%\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
-\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
+\newfontfamily\chapterfont{goudy-thirty.light.ttf}
 
-
-\defaultfontfeatures{Ligatures=TeX}
-%\addtokomafont{part}{libertine}
-%\addtokomafont{partnumber}{libertine}
-\addtokomafont{part}{ebgaramond}
-\addtokomafont{partnumber}{ebgaramond}
 \setkomafont{chapter}{\chapterfont\Huge\bfseries}
 
 \automark{chapter}
 \lehead{The Scarlet Pimpernel}
 \rohead{Chapter \thechapter: \leftmark}
 
-\headsep=10pt
-\headheight=45pt
-\footskip=30pt
-%\raggedbottom
-
-\setkomafont{chapter}{\chapterfont\Huge\bfseries}
-\renewcommand*{\chaptermarkformat}{%
-
-\chapapp~\thechapter\autodot\enskip}
+%\renewcommand*{\chaptermarkformat}{%
+%
+%\chapapp~\thechapter\autodot\enskip}
 
 \hyphenation{Ma-dame Emp-seed Hemp-seed Comt-esse Ci-toyen Ci-toyenne Gros-pierre Mar-gue-rite Per-cy Blake-ney Chauve-lin}
-
-\addtokomafont{disposition}{\normalfont}
-
-\graphicspath{ {./images/} }
-\captionsetup[figure]{font=sc}
-\captionsetup{labelformat=empty}
-%\BeforeTOCHead[toc]{%
-%  \KOMAoptions{parskip=false}% no parskip in ToC
-%  \RedeclareSectionCommand[afterskip=1sp]{chapter}% no skip after ToC title
-%}
 
 
 
 \begin{document}
 \frontmatter
-\renewcommand*{\sectionmarkformat}{}
-%\renewcommand*{\chapterpagestyle}{empty}
+
 
 \KOMAoptions{headings=openright}
-%\pagestyle{empty}
-%\begin{figure}[p]
-%\begin{minipage}[c]{\linewidth}
-%\includegraphics[width=\linewidth]{scarletpimpfront}
-%\end{minipage}
-%\end{figure}
+
 
 \includepdf[width=1.1\textwidth]{scarletpimpfront.png}
 
@@ -131,32 +45,14 @@ headings=big]{scrbook}
 
 \renewcommand*\raggedchapter{\centering}
 \KOMAoptions{headings=openright}
-%\pagestyle{empty}
-%\begin{figure}[p]
-%\begin{minipage}[c]{\linewidth}
-%
-%\end{minipage}
-%\end{figure}
+
 
 \KOMAoptions{headings=openany}
 
 \tableofcontents
+\thispagestyle{plain}
 \clearpage
 
-%\thispagestyle{empty}
-%{\headsep=0pt
-%\headheight=20pt
-%\vfill
-%\begin{figure}[p!]
-%\centering
-%%\begin{minipage}[c]{1.2\linewidth}
-%\includegraphics[width=\linewidth]{guill2}
-%\caption{Traitors, look and tremble: she will cease her activity only when you have all lost your lives.}
-%\label{guillotine}
-%%\end{minipage}
-%\end{figure}
-%\vfill
-%\clearpage}
 
 \makeatletter
 \@ifclasswith{scrbook}{a5paper}
@@ -190,15 +86,10 @@ headings=big]{scrbook}
 
 \mainmatter
 \renewcommand*{\chapterpagestyle}{plain}
-%\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
 
 
 \renewcommand*{\chaptermarkformat}{}
 \KOMAoptions{headings=openright}
-
-\headsep=10pt
-\headheight=45pt
-\footskip=30pt
 
 \include{chapters/01.tex}
 \include{chapters/02.tex}
@@ -237,23 +128,23 @@ headings=big]{scrbook}
 \chapter*{Colophon}
 
 \centering
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond's famous humanist typefaces from the mid-sixteenth century. \\github.com/georgd/EB-Garamond
+EB Garamond is Georg Mayr-Duffner's open source implementation of Claude Garamond's famous humanist typefaces from the mid-sixteenth century. \\github.com/georgd/EB-Garamond
 
 \rule{0.5\textwidth}{.4pt}
 
-Hungarian-British author Baroness Emma »Emmuska« Orczy (1865\textendash1947) first published \textit{The Scarlet Pimpernel} in 1905, by Greening in London (UK).
+Baroness Emma »Emmuska« Orczy (1865\textendash1947) first published \textit{The Scarlet Pimpernel} in 1905, with Greening in London (UK).
 
 \rule{0.5\textwidth}{.4pt}
 
-Chapter headings are set in Dieter Steffmann's font Goudy Thirty Light. Dropcaps are set in Paul Lloyd's font Pompadour.\\www.steffmann.de\\moorstation.org/typoasis/designers/lloyd/
+Chapter headings are set in »Goudy Thirty Light«, by Dieter Steffmann. Dropcaps are set in »Pompadour«, by Paul Lloyd.\\www.steffmann.de\\moorstation.org/typoasis/designers/lloyd/
 
 \rule{0.5\textwidth}{.4pt}
 
-Title page illustration cropped from the German poster for the 1934 movie of \textit{The Scarlet Pimpernel}, directed by Harold Young.
+Title page illustration cropped from the German poster for the 1934 movie of \textit{The Scarlet Pimpernel}, starring Leslie Howard and Merle Oberon, and directed by Harold Young.
 
 \rule{0.5\textwidth}{.4pt}
 
-Illustration on page \pageref{guillotine} is from an engraving by Jean-Baptiste Louvion (1740\textendash1804), printed around 1793 and now held by the Musée Carnavalet in Paris. 
+Illustration on page \pageref{guillotine} is from an engraving by Jean-Baptiste Louvion (1740\textendash1804), printed around 1793. The original is held by the Musée Carnavalet in Paris. 
 
 \rule{0.5\textwidth}{.4pt}
 
