@@ -5,6 +5,8 @@ Adventure! Intriuge! Narrow escapes! Feats of daring and courage! Hungarian-Brit
 
 CW: Antisemitism, misogyny, classism. References to mob violence and violent death. Heroine bound and gagged. Blackmail.
 
+_**I have assumed throughout that you are using borderless printing**._ If your printer adds a border, you will need to make adjustments--the easiest way I've found is to increase BCOR by $borderwidth*2. For my own use (my own printer does not support borderless printing) I also set DIV to an artificially high 15, for smaller margins (since these will be enlarged in printing).
+
 If you are using US letter paper (8.5" x 11"), download the "letter" folder containing the signatures and print them out, double-sided, flip on short side.
 
 If you are using A4, download the "a4" folder containing the signatures and print them out, double-sided, flip on short side.
